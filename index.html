@@ -1,154 +1,386 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog - Cyberbullying</title>
+<head>
 
-    <style>
+  <meta charset="UTF-8">
 
-      /* FUNDO DA PÁGINA */
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #dceeff, #f5f9ff);
-        margin: 0;
-        padding: 30px 15px;
-        color: #183C63;
-      }
+  <title>Blog sobre Cyberbullying</title>
 
 
-      /* CABEÇALHO */
+  <style>
 
-      header {
-        background: linear-gradient(135deg, #183C63, #245A8D);
-        color: #FFFFFF;
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      }
-
-      header h1 {
-        font-size: 32px;
-        margin-top: 0;
-      }
-
-      header p {
-        font-size: 18px;
-      }
+    body {
+      background-color: #EAF2F8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
 
 
-      /* CONTEÚDO PRINCIPAL */
-
-      main {
-        background-color: #FFFFFF;
-        max-width: 800px;
-        margin: 25px auto;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.12);
-      }
-
-
-      /* PRIMEIRA IMAGEM */
-
-      main > img:first-child {
-        width: 200px;
-        height: 200px;
-        display: block;
-        margin: 0 auto 20px;
-        object-fit: cover;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      }
+    header {
+      background-color: #183C63;
+      color: #FFFFFF;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 25px;
+      border-radius: 12px;
+    }
 
 
-      /* TÍTULOS */
-
-      h2 {
-        color: #183C63;
-        border-left: 5px solid #2E86C1;
-        padding-left: 10px;
-      }
-
-      h3 {
-        color: #245A8D;
-      }
-
-      p {
-        line-height: 1.6;
-      }
+    header h1 {
+      margin-top: 0;
+    }
 
 
-      /* AUTOR */
-
-      .artigo-autor {
-        font-weight: bold;
-        color: #2E86C1;
-      }
-
-
-      /* BOTÕES */
-
-      button {
-        margin-top: 10px;
-        margin-right: 8px;
-        padding: 10px 18px;
-        border: none;
-        border-radius: 20px;
-        background-color: #EAF2F8;
-        color: #183C63;
-        font-size: 17px;
-        cursor: pointer;
-        transition: 0.2s;
-      }
-
-      button:hover {
-        transform: scale(1.05);
-        background-color: #D6EAF8;
-      }
+    main {
+      background-color: #FFFFFF;
+      color: #183C63;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 12px;
+    }
 
 
-      /* BOTÃO CURTIDO */
-
-      .curtido {
-        background-color: #82E0AA;
-        color: #145A32;
-      }
-
-
-      /* BOTÃO NÃO CURTIDO */
-
-      .nao-curtido {
-        background-color: #F5B7B1;
-        color: #78281F;
-      }
+    img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
 
-      /* CAIXA DE CURIOSIDADES */
-
-      .curiosidades {
-        background-color: #EAF2F8;
-        padding: 20px;
-        margin-top: 30px;
-        border-radius: 12px;
-        border-left: 5px solid #2E86C1;
-      }
+    .segunda-imagem {
+      width: 300px;
+      height: 200px;
+      margin-top: 20px;
+    }
 
 
-      /* SEGUNDA IMAGEM */
+    .artigo-autor {
+      font-weight: bold;
+      color: #245A8D;
+    }
 
-      .segunda-imagem {
-        width: 100%;
-        max-width: 500px;
-        height: 280px;
-        display: block;
-        margin: 30px auto;
-        object-fit: cover;
-        border-radius: 15px;
-        box-shadow: 0 5px 12px rgba(0,0,0,0.
+
+    .curiosidades {
+      background-color: #EAF2F8;
+      padding: 20px;
+      margin-top: 25px;
+      border-radius: 10px;
+    }
+
+
+    .dicas {
+      background-color: #DFF0D8;
+      padding: 20px;
+      margin-top: 25px;
+      border-radius: 10px;
+    }
+
+
+    button {
+      margin-top: 10px;
+      margin-right: 8px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #EAF2F8;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+
+    button:hover {
+      background-color: #D6EAF8;
+    }
+
+
+    .curtido {
+      background-color: #90EE90;
+    }
+
+
+    .nao-curtido {
+      background-color: #FF9999;
+    }
+
+
+    h2 {
+      color: #183C63;
+    }
+
+
+    h3 {
+      color: #245A8D;
+    }
+
+
+    p {
+      line-height: 1.6;
+    }
+
+
+    footer {
+      text-align: center;
+      color: #183C63;
+      margin-top: 20px;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <header>
+
+    <h1>
+      🌐 Minha página sobre Cyberbullying
+    </h1>
+
+    <p>
+      Aqui vou compartilhar sobre o que o cyberbullying faz nos jovens.
+    </p>
+
+  </header>
+
+
+  <main>
+
+
+    <img
+      src="Gemini_Generated_Image_4u73oi4u73oi4u73.png"
+      alt="Imagem sobre cyberbullying"
+    >
+
+
+    <div>
+
+      <h2>Meu primeiro post</h2>
+
+      <p class="artigo-autor">
+        Por: Caike Wianoski
+      </p>
+
+      <p>
+        Boas-vindas ao meu novo blog! Aqui vou compartilhar os perigos
+        do cyberbullying e como ele pode afetar os jovens.
+      </p>
+
+      <p>
+        O cyberbullying acontece quando uma pessoa usa a internet,
+        redes sociais, jogos ou aplicativos para ofender, humilhar,
+        ameaçar ou espalhar coisas ruins sobre outra pessoa.
+      </p>
+
+
+      <!-- BOTÕES -->
+
+      <button id="curtir">
+
+        👍 <span id="numeroCurtidas">0</span>
+
+      </button>
+
+
+      <button id="naoCurtir">
+
+        👎 <span id="numeroNaoCurtidas">0</span>
+
+      </button>
+
+    </div>
+
+
+
+    <div class="curiosidades">
+
+      <h2>
+        🔎 Curiosidades sobre o cyberbullying
+      </h2>
+
+
+      <h3>
+        1. Pode acontecer em qualquer lugar
+      </h3>
+
+      <p>
+        O cyberbullying não acontece somente nas redes sociais.
+        Ele também pode acontecer em jogos online, grupos de mensagens,
+        comentários de vídeos e outras plataformas da internet.
+      </p>
+
+
+      <h3>
+        2. Pode atingir muitas pessoas
+      </h3>
+
+      <p>
+        Uma mensagem ou imagem ofensiva pode ser compartilhada
+        rapidamente e chegar a muitas pessoas.
+      </p>
+
+
+      <h3>
+        3. Pode afetar os sentimentos
+      </h3>
+
+      <p>
+        Uma pessoa que sofre cyberbullying pode ficar triste,
+        preocupada, com vergonha ou com medo de conversar com
+        outras pessoas.
+      </p>
+
+
+      <h3>
+        4. A internet deixa registros
+      </h3>
+
+      <p>
+        Mesmo quando alguém apaga uma publicação, outras pessoas
+        podem ter feito capturas de tela. Por isso, é importante
+        pensar antes de publicar alguma coisa.
+      </p>
+
+
+      <h3>
+        5. Uma "brincadeira" também pode machucar
+      </h3>
+
+      <p>
+        Nem todo mundo acha graça das mesmas coisas.
+        Uma piada para uma pessoa pode ser uma ofensa para outra.
+      </p>
+
+    </div>
+
+
+
+    <!-- SEGUNDA IMAGEM -->
+
+    <img
+      class="segunda-imagem"
+      src="segunda-imagem.png"
+      alt="Segunda imagem sobre cyberbullying"
+    >
+
+
+
+    <div class="dicas">
+
+      <h2>
+        🛡️ Como evitar o cyberbullying?
+      </h2>
+
+      <p>
+        Todos nós podemos ajudar a tornar a internet um lugar melhor.
+      </p>
+
+
+      <ul>
+
+        <li>
+          Não compartilhe mensagens para humilhar alguém.
+        </li>
+
+        <li>
+          Não participe de grupos que atacam outras pessoas.
+        </li>
+
+        <li>
+          Pense antes de publicar alguma coisa.
+        </li>
+
+        <li>
+          Converse com um adulto de confiança.
+        </li>
+
+        <li>
+          Bloqueie e denuncie quem pratica agressões.
+        </li>
+
+        <li>
+          Guarde prints das mensagens ofensivas.
+        </li>
+
+      </ul>
+
+    </div>
+
+
+
+    <div>
+
+      <h2>
+        📱 Onde o cyberbullying pode acontecer?
+      </h2>
+
+      <ul>
+
+        <li>Instagram</li>
+
+        <li>TikTok</li>
+
+        <li>YouTube</li>
+
+        <li>WhatsApp</li>
+
+        <li>Jogos online</li>
+
+        <li>Comentários em redes sociais</li>
+
+      </ul>
+
+    </div>
+
+
+
+    <div>
+
+      <h2>
+        💭 O que fazer se eu sofrer cyberbullying?
+      </h2>
+
+      <p>
+        Se isso acontecer, você não precisa enfrentar a situação sozinho.
+      </p>
+
+      <p>
+        Converse com seus pais, responsáveis, professores ou outro
+        adulto de confiança.
+      </p>
+
+      <p>
+        Também é importante bloquear e denunciar quem está praticando
+        as agressões.
+      </p>
+
+    </div>
+
+
+
+    <div>
+
+      <h2>
+        ❤️ Respeito na internet
+      </h2>
+
+      <p>
+        A internet pode ser um lugar divertido para aprender,
+        conversar e fazer amizades.
+      </p>
+
+      <p>
+        Antes de publicar alguma coisa, pense:
+        <strong>"Eu gostaria que fizessem isso comigo?"</strong>
+      </p>
+
+    </div>
