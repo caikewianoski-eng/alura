@@ -4,65 +4,82 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Blog - Cyberbullying</title>
+
     <style>
-     
-      header{
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #EAF2F8;
+        margin: 0;
+        padding: 20px;
+      }
+
+      header {
         background-color: #183C63;
         color: #FFFFFF;
         text-align: center;
         max-width: 800px;
         margin: 0 auto;
-        padding: 16px;
+        padding: 20px;
+        border-radius: 10px;
       }
-      main{
+
+      header h1 {
+        margin-top: 0;
+      }
+
+      main {
         background-color: #FFFFFF;
         color: #183C63;
         max-width: 800px;
-        margin: 0 auto;
-        padding: 16px;
-        display: flex;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
       }
+
+      .post {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+      }
+
       img {
         width: 160px;
         height: 160px;
+        object-fit: cover;
+        border-radius: 10px;
       }
+
+      .segunda-imagem {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        margin-top: 20px;
+        border-radius: 10px;
+      }
+
       .artigo-autor {
         font-weight: bold;
       }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Minha página sobre o que o cyberbullyng faz nos jovens.</h1>
-      <p1>Aqui vou compartilhar sobre o que o cyberbullyng faz nos jovens.</p1>
-    </header>
-     
-    <main>
-      <img src="Gemini_Generated_Image_4u73oi4u73oi4u73.png" alt=".">
 
-      <div>
-        <h2>Meu primeiro post</h2>
-        <p class="artigo-autor">Por:Caike Wianoski</p>
-        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar os perigos do cyberbullyng.</p>
-        <button>👍<span>0</span></button>
-        <button>👎<span>0</span></button>
-        
-      </div>
-    </main>
-  </body>
-  <script>
-   
-    const botoes = document.querySelectorAll("button");
-   
-    botoes.forEach(function(botao) {
-      botao.addEventListener("click", botaoClicado);
-      function botaoClicado() {
-        console.log("fui clicado");
-        let texto = botao.querySelector("span");
-        texto.textContent++;
+      h2 {
+        color: #183C63;
       }
-})
-   
-  </script>
-</html
+
+      h3 {
+        color: #245A8D;
+      }
+
+      .curiosidades {
+        background-color: #EAF2F8;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+
+      .curiosidades li {
+        margin-bottom: 10px;
+      }
+
+      .dicas {
+        background-color: #DFF3E4
