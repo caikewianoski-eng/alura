@@ -4,7 +4,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Blog</title>
 
     <style>
@@ -61,21 +60,27 @@
         cursor: pointer;
       }
 
+      /* Quando o botão for curtido */
+      .curtido {
+        background-color: #90EE90;
+      }
+
+      /* Quando o botão de não curtir for clicado */
+      .nao-curtido {
+        background-color: #FF9999;
+      }
+
     </style>
   </head>
 
   <body>
 
     <header>
-
-      <h1>
-        Minha página sobre o que o cyberbullying faz nos jovens.
-      </h1>
+      <h1>Minha página sobre o que o cyberbullying faz nos jovens.</h1>
 
       <p>
         Aqui vou compartilhar sobre o que o cyberbullying faz nos jovens.
       </p>
-
     </header>
      
     <main>
@@ -106,12 +111,12 @@
 
         <!-- BOTÕES -->
 
-        <button class="like">
-          👍 <span>0</span>
+        <button id="botaoCurtir">
+          👍 <span id="numeroCurtidas">0</span>
         </button>
 
-        <button class="dislike">
-          👎 <span>0</span>
+        <button id="botaoNaoCurtir">
+          👎 <span id="numeroNaoCurtidas">0</span>
         </button>
 
       </div>
@@ -124,9 +129,11 @@
         <h3>1. Pode acontecer em qualquer lugar</h3>
 
         <p>
-          O cyberbullying pode acontecer em redes sociais, jogos online,
-          grupos de mensagens e comentários na internet.
+          O cyberbullying não acontece somente nas redes sociais.
+          Ele também pode acontecer em jogos online, grupos de mensagens,
+          comentários de vídeos e outras plataformas da internet.
         </p>
+
 
         <h3>2. Pode atingir muitas pessoas</h3>
 
@@ -135,25 +142,29 @@
           rapidamente e chegar a muitas pessoas.
         </p>
 
+
         <h3>3. Pode afetar os sentimentos</h3>
 
         <p>
-          Quem sofre cyberbullying pode ficar triste, preocupado,
-          com vergonha ou com medo de conversar com outras pessoas.
+          Uma pessoa que sofre cyberbullying pode ficar triste,
+          preocupada, com vergonha ou com medo de conversar com outras pessoas.
         </p>
+
 
         <h3>4. A internet deixa registros</h3>
 
         <p>
-          Mesmo quando uma publicação é apagada, alguém pode ter
-          feito uma captura de tela.
+          Mesmo quando alguém apaga uma publicação, outras pessoas
+          podem ter feito capturas de tela. Por isso, é importante
+          pensar antes de publicar alguma coisa.
         </p>
 
-        <h3>5. Uma brincadeira pode machucar</h3>
+
+        <h3>5. Uma "brincadeira" também pode machucar</h3>
 
         <p>
-          O que parece engraçado para uma pessoa pode ser ofensivo
-          para outra.
+          Nem todo mundo acha graça das mesmas coisas. Uma piada para
+          uma pessoa pode ser uma ofensa para outra.
         </p>
 
       </div>
@@ -171,6 +182,10 @@
       <div class="dicas">
 
         <h2>🛡️ Como evitar o cyberbullying?</h2>
+
+        <p>
+          Todos nós podemos ajudar a tornar a internet um lugar melhor.
+        </p>
 
         <ul>
 
@@ -190,98 +205,56 @@
 
       </div>
 
-
-      <div>
-
-        <h2>📱 Onde o cyberbullying pode acontecer?</h2>
-
-        <p>
-          Ele pode acontecer em vários lugares da internet:
-        </p>
-
-        <ul>
-
-          <li>Instagram</li>
-
-          <li>TikTok</li>
-
-          <li>YouTube</li>
-
-          <li>WhatsApp</li>
-
-          <li>Jogos online</li>
-
-          <li>Comentários em redes sociais</li>
-
-        </ul>
-
-      </div>
-
-
-      <div>
-
-        <h2>💭 O que fazer se eu sofrer cyberbullying?</h2>
-
-        <p>
-          Se isso acontecer, você não precisa enfrentar a situação sozinho.
-        </p>
-
-        <p>
-          Converse com seus pais, responsáveis, professores ou outro
-          adulto de confiança.
-        </p>
-
-        <p>
-          Também é importante bloquear e denunciar quem está praticando
-          as agressões.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h2>❤️ Respeito na internet</h2>
-
-        <p>
-          A internet pode ser um lugar divertido para aprender,
-          conversar e fazer amizades.
-        </p>
-
-        <p>
-          Antes de publicar alguma coisa, pense:
-          <strong>"Eu gostaria que fizessem isso comigo?"</strong>
-        </p>
-
-      </div>
-
     </main>
 
 
     <script>
 
-      // Pegamos todos os botões da página
-      const botoes = document.querySelectorAll("button");
+      // Pegando os botões
+      const botaoCurtir = document.querySelector("#botaoCurtir");
+      const botaoNaoCurtir = document.querySelector("#botaoNaoCurtir");
 
-      // Fazemos uma função para cada botão
-      botoes.forEach(function(botao) {
+      // Pegando os números
+      const numeroCurtidas = document.querySelector("#numeroCurtidas");
+      const numeroNaoCurtidas = document.querySelector("#numeroNaoCurtidas");
 
-        // Quando o botão for clicado
-        botao.addEventListener("click", function() {
 
-          // Pegamos o número que está dentro do span
-          let texto = botao.querySelector("span");
+      // Quando a pessoa clicar no botão 👍
+      botaoCurtir.addEventListener("click", function() {
 
-          // Transformamos o número em número de verdade
-          let numero = Number(texto.textContent);
+        if (numeroCurtidas.textContent == "0") {
 
-          // Aumentamos 1
-          numero = numero + 1;
+          numeroCurtidas.textContent = "1";
 
-          // Mostramos o novo número na página
-          texto.textContent = numero;
+          botaoCurtir.classList.add("curtido");
 
-        });
+        } else {
+
+          numeroCurtidas.textContent = "0";
+
+          botaoCurtir.classList.remove("curtido");
+
+        }
+
+      });
+
+
+      // Quando a pessoa clicar no botão 👎
+      botaoNaoCurtir.addEventListener("click", function() {
+
+        if (numeroNaoCurtidas.textContent == "0") {
+
+          numeroNaoCurtidas.textContent = "1";
+
+          botaoNaoCurtir.classList.add("nao-curtido");
+
+        } else {
+
+          numeroNaoCurtidas.textContent = "0";
+
+          botaoNaoCurtir.classList.remove("nao-curtido");
+
+        }
 
       });
 
